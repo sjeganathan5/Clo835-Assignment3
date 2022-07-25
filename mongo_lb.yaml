@@ -12,3 +12,5 @@ spec:
   selector:
     app.kubernetes.io/name: guestbook
     app.kubernetes.io/component: frontend
+    
+    #loadbalancer for frontend mongo application
