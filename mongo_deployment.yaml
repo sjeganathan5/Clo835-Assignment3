@@ -17,6 +17,10 @@ spec:
         app.kubernetes.io/name: mongo
         app.kubernetes.io/component: backend
     spec:
+      volumes:
+      - name: mongodb-pvc
+        persistentVolumeClaim:
+          claimName: mongo-pvc
       containers:
       - name: mongo
         image: mongo:4.2
@@ -30,9 +34,6 @@ spec:
         ports:
         - containerPort: 27017
         volumeMounts:
-        - mountPath: /data
+        - mountPath: /data/db
           name: mongodb-pvc
-      volumes:
-        - name: mongodb-pvc
-          persistentVolumeClaim:
-            claimName: mongo-pvc
+      
