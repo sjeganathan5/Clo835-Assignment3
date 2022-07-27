@@ -9,3 +9,5 @@ parameters:
 reclaimPolicy: Delete
 volumeBindingMode: WaitForFirstConsumer
 allowVolumeExpansion: false
+
+#reclaimPolicy: Retain
