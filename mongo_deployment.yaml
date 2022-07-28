@@ -30,7 +30,7 @@ spec:
         ports:
         - containerPort: 27017
         volumeMounts:
-        - mountPath: /data
+        - mountPath: /data/db
           name: mongodb-pvc
       volumes:
         - name: mongodb-pvc
